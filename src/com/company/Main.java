@@ -25,6 +25,7 @@ public class Main {
        System.out.println(firstTriangle);
        System.out.println(firstTriangle.hashCode());
 
+
        Triangle secondTriangle = new Triangle(4,4,5);
        System.out.println(firstTriangle.equals(secondTriangle));
     }

@@ -19,7 +19,7 @@ package com.company;
 
 import java.util.Objects;
 
-public class Triangle {
+public class Triangle implements interTriangle, interBolean {
 
     private int firstSide;
     private int secondSide;
@@ -35,21 +35,21 @@ public class Triangle {
         this.thirdSide = thirdSide;
     }
 
-    public int getFirstSide() {
+    public double getFirstSide() {
         return firstSide;
     }
     public void setFirstSide(int side) {
         this.firstSide = side;
     }
 
-    public int getSecondSide() {
+    public double getSecondSide() {
         return firstSide;
     }
     public void setSecondSide(int side) {
         this.firstSide = side;
     }
 
-    public int getThirdSide() {
+    public double getThirdSide() {
         return firstSide;
     }
     public void setThirdSide(int side) {
@@ -98,8 +98,8 @@ public class Triangle {
         return result1;
     }
 
-    public int longestSide(){
-        int longestSide = 0;
+    public double longestSide(){
+        double longestSide = 0;
         if (getFirstSide() > longestSide)
             longestSide = getFirstSide();
         if (getSecondSide() > longestSide)
