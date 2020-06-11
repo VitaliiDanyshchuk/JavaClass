@@ -136,7 +136,40 @@ public class Triangle implements interTriangle, interBolean {
 
     @Override
     public int hashCode() {
-        return  Objects.hash(getFirstSide(), getSecondSide(), getThirdSide());
+        return  Objects.hash(getFirstSide(),
+                getSecondSide(), getThirdSide());
     }
 
+
+    @Override
+    public String toJSON() {
+        String json = "Triangle{"
+                + "\""  + "Area\":" + this.getArea()
+                + ","
+                + "\""  + "Perimeter\":" + this.getPerimetr()
+                + "}";
+        return json;
+    }
+
+    @Override
+    public String toXML() {
+        String xml = "<Triangle>"
+                + "<area>" + this.getArea() + "<area>"
+                + "<perimeter>" + this.getPerimetr() + "<perimeter>"
+                +  "</Triangle>";
+
+        return xml;
+    }
+
+    @Override
+    public String toConsole() {
+        String console = "Triangle{"
+                + "-"  + "Area\":" + this.getArea()
+                + "-"
+                + "-"  + "Perimetr\":" + this.getPerimetr()
+                + "}";
+        return console;
+
+
+    }
 }

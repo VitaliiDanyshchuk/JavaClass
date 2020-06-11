@@ -26,7 +26,16 @@ public class Main {
        System.out.println(firstTriangle.hashCode());
 
 
-       Triangle secondTriangle = new Triangle(4,4,5);
-       System.out.println(firstTriangle.equals(secondTriangle));
+        Triangle secondTriangle = new Triangle(4,4,5);
+        System.out.println(firstTriangle.equals(secondTriangle));
+        System.out.println("To JSON " + secondTriangle.toJSON());
+        System.out.println("To XML " + secondTriangle.toXML());
+        System.out.println("To console" +secondTriangle.toConsole());
+
+        //Road Sign extend class
+
+        roadSign sign = new roadSign("warning",2,true,"red");
+        sign.setSignNumber(5);
+        System.out.println(sign);
     }
 }

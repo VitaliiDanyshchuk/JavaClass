@@ -16,6 +16,8 @@ package com.company;
 
 public interface interBolean {
 
-    boolean isIsosceles();
-    boolean isEquilateral();
+    String toString();
+    String toJSON();
+    String toXML();
+    String toConsole();
 }
