@@ -44,7 +44,7 @@ Task description:
         private String motherPhone;
         private String fatherName;
         private String fatherPhone;
-        private String bankDetails;
+        private boolean isScientificWorks;
 
         /**
          * Class constructor without parameters
@@ -86,7 +86,7 @@ Task description:
          * @param motherPhone student's mother phone
          * @param fatherName student's father name
          * @param fatherPhone student's father phone
-         * @param bankDetails student's bank details
+         * @param isScientificWorks a check if student have scientific works
          */
         public Student(String firstName,
                        String lastName,
@@ -119,7 +119,7 @@ Task description:
                        String motherPhone,
                        String fatherName,
                        String fatherPhone,
-                       String bankDetails) {
+                       boolean isScientificWorks) {
 
             this.firstName = firstName;
             this.lastName = lastName;
@@ -153,7 +153,7 @@ Task description:
             this.motherPhone = motherPhone;
             this.fatherName = fatherName;
             this.fatherPhone = fatherPhone;
-            this.bankDetails = bankDetails;
+            this.isScientificWorks = isScientificWorks;
         }
 
         // getters and setters
@@ -413,12 +413,12 @@ Task description:
             this.fatherPhone = fatherPhone;
         }
 
-        public String getBankDetails() {
-            return bankDetails;
+        public boolean getIsScientificWorks() {
+            return isScientificWorks;
         }
 
-        public void setBankDetails(String bankDetails) {
-            this.bankDetails = bankDetails;
+        public void setIsScientificWorks(boolean isScientificWorks) {
+            this.isScientificWorks = isScientificWorks;
         }
 
         /**
@@ -470,7 +470,7 @@ Task description:
                 this.studentToBuild.motherPhone = student.motherPhone;
                 this.studentToBuild.fatherName = student.fatherName;
                 this.studentToBuild.fatherPhone = student.fatherPhone;
-                this.studentToBuild.bankDetails = student.bankDetails;
+                this.studentToBuild.isScientificWorks = student.isScientificWorks;
 
                 return this;
             }
@@ -636,8 +636,8 @@ Task description:
                 return this;
             }
 
-            public Builder setBankDetails(String bankDetails) {
-                studentToBuild.setBankDetails(bankDetails);
+            public Builder setIsScientificWorks(boolean isScientificWorks) {
+                studentToBuild.setIsScientificWorks(isScientificWorks);
                 return this;
             }
 
@@ -649,5 +649,6 @@ Task description:
             }
 
         }
+
     }
 

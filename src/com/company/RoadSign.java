@@ -4,8 +4,8 @@
 *
 *  11 June 2020
 *
-* Author: Danyshchuk Vitalii CHNU 543
-* Version: 1.1
+* @author: Danyshchuk Vitalii CHNU 543
+* @version: 1.1
 *
 *  Module 2 task 2
 *
@@ -23,10 +23,11 @@ import java.util.Objects;
 //a road sign that has a triangular shape and takes over some variables from the main triangle class
 public class RoadSign extends Triangle{
 
-        private String signType; // groups of road signs for example: warning, prohibitive, etc.
-        private double signNumber; // serial number of the road sign from the traffic rules
-        private boolean signWarning; // is sign whether the sign is a warning
-        private String signColor;  // for example: red - warning, green - indicative, yellow - prohibitive
+        private String signType; //
+        private double signNumber; //
+        private boolean signWarning; //
+        private String signColor;  //
+
 
         public RoadSign(int firstSide,
                         int secondSide,
@@ -36,6 +37,15 @@ public class RoadSign extends Triangle{
             this.signNumber = signNumber;
             this.signWarning = signWarning;
             this.signColor = signColor;
+
+            /**
+             * Class constructor with parameters
+             * @param signType groups of road signs for example: warning, prohibitive, etc.
+             * @param signNumber serial number of the road sign from the traffic rules
+             * @param signWarning is sign whether the sign is a warning
+             * @param signColor for example: red - warning, green - indicative, yellow - prohibitive
+             *
+             **/
         }
 
         public RoadSign(String signType, int signNumber, boolean signWarning,
