@@ -4,14 +4,14 @@
 *
 *  11 June 2020
 *
-* @author: Danyshchuk Vitalii CHNU 543
-* @version: 1.1
+ @author: Danyshchuk Vitalii CHNU 543
+ @version: 1.1
 *
 *  Module 2 task 2
 *
 * Inheritance
 
-1. Create a child  from the class Rectangle.
+1. Create a child  from the class Triangle.
 
 2. Create another class as a super class for your one.  Or create a daughterly class for your one.
 *
