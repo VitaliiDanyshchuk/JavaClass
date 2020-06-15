@@ -41,8 +41,7 @@ public class Main {
 
 
         // Create triangle instance with AbstractFactory
-        IGeometry triangle2 = AbstractFactory.create(10,1,2, Figure.TRIANGLE);
+        IGeometry triangle2 = AbstractFactory.create(10,1,2,Figure.TRIANGLE);
         System.out.println(triangle2.getPerimetr());
-
     }
 }

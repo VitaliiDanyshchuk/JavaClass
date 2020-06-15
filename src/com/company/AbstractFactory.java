@@ -1,5 +1,5 @@
 /**
- * author Danyschuk Vitalii CHNU
+ * @author Danyschuk Vitalii CHNU
  * @version 1.0
  * Classname AbstractFactory*
  *
@@ -9,7 +9,6 @@ package com.company;
 
 public class AbstractFactory {
 
-    // Creation of class instance depending on requested figure
     public static IGeometry create(int sideA,int sideB, int sideC, Figure figure) {
         switch (figure) {
             case TRIANGLE: return new Triangle(sideA, sideB, sideC);

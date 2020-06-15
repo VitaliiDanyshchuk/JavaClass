@@ -1,5 +1,5 @@
 /**
- * author Danyschuk Vitalii CHNU
+ * @author Danyschuk Vitalii CHNU
  * @version 1.0
  * Classname TriangleFactory*
  *

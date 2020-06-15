@@ -1,5 +1,5 @@
 /**
-* author Danyschuk Vitalii CHNU
+* @author Danyschuk Vitalii CHNU
 * @version 1.0
 * Classname Student*
 *
@@ -11,147 +11,83 @@ Task description:
     package com.company;
     import java.time.LocalDate;
     public class Student {
-        // properties for class Student
-        private String firstName;
-        private String lastName;
-        private String patronymic;
-        private LocalDate birthday;
-        private Speciality speciality;
-        private Gender gender;
-        private String faculty;
-        private String groupNumber;
-        private String curator;
-        private String pasportSeries;
-        private int pasportNumber;
-        private int identificationNumber;
-        private int course;
-        private String academicDegree;
-        private String sportSection;
-        private Float averageMark;
-        private String citizenship;
-        private boolean isContractor;
-        private boolean isUnionist;
-        private boolean hasScholarship;
-        private boolean hasSocialBenefit;
-        private String previousEducation;
-        private String registrationCity;
-        private String registrationAddress;
-        private int postIndex;
-        private String characteristics;
-        private boolean isFullTimeEducation;
-        private boolean isDutyBound;
-        private String motherName;
-        private String motherPhone;
-        private String fatherName;
-        private String fatherPhone;
-        private boolean isScientificWorks;
+        private String firstName;           // firstName student's first name
+        private String lastName;            // lastName student's last name
+        private int phoneNumber;            // student's phone number
+        private LocalDate birthday;         // student's birthday
+        private Gender gender;              // student's gender
+        private String faculty;             // on what faculty student is studying
+        private String speciality;      // on what speciality student is studying
+        private String groupNumber;         // on what group student is studying
+        private int creditsNumber;          // unit of measurement of student workload
+        private String pasportSeries;       // student's pasport series
+        private int identificationNumber;   // student's identification number
+        private boolean liveInChummery;     // is student live in chummery
+        private int course;                 // number of course
+        private String sportSection;        // student's sport section
+        private Float averageMark;          // average mark of student
+        private String citizenship;         // student's citizenship
+        private boolean isContract;         // paid or free study
+        private String emailAddress;        // student`s email
+        private boolean socialBenefit;      // is student have social benefit
+        private int postIndex;              // student's post index
+        private boolean isFullTimeEducation;// is student studying full-time or part-time
+        private boolean isEmployee;         // is student employee
+        private String motherPhone;         // number of mather phone
+        private String fatherPhone;         // number of father phone
+        private boolean isScientificWorks;  // is student have scientific works
 
-        /**
-         * Class constructor without parameters
-         */
         public Student() {
         }
 
-        /**
-         * Class constructor with parameters
-         * @param firstName student's first name
-         * @param lastName student's last name
-         * @param patronymic student's patronymic
-         * @param birthday student's birthday
-         * @param speciality speciality on which a student is studying
-         * @param gender student's gender
-         * @param faculty faculty on which a student is studying
-         * @param groupNumber groupNumber in which a student is studying
-         * @param curator curator of a student group
-         * @param pasportSeries student's pasport series
-         * @param pasportNumber student's pasport number
-         * @param identificationNumber student's identification number
-         * @param course number of course on which a student is studying
-         * @param academicDegree academic degree which a student is gaining
-         * @param sportSection student's sport section
-         * @param averageMark student's average mark for final subjects
-         * @param citizenship student's citizenship
-         * @param isContractor a check if student is a contractor
-         * @param isUnionist a check if student is unionist
-         * @param hasScholarship a check if student has scholarship
-         * @param hasSocialBenefit a check if student has social benefit
-         * @param previousEducation student's previous education
-         * @param registrationCity student's city of registration
-         * @param registrationAddress student's address of registration
-         * @param postIndex student's post index
-         * @param characteristics student's characteristics
-         * @param isFullTimeEducation a check if student is studying full-time or part-time
-         * @param isDutyBound a check if student is duty bound
-         * @param motherName student's mother name
-         * @param motherPhone student's mother phone
-         * @param fatherName student's father name
-         * @param fatherPhone student's father phone
-         * @param isScientificWorks a check if student have scientific works
-         */
         public Student(String firstName,
                        String lastName,
-                       String patronymic,
+                       int phoneNumber,
                        LocalDate birthday,
-                       Speciality speciality,
-                       Gender gender, String faculty,
+                       String speciality,
+                       Gender gender,
+                       String faculty,
                        String groupNumber,
-                       String curator,
                        String pasportSeries,
-                       int pasportNumber,
                        int identificationNumber,
+                       boolean liveInChummery,
                        int course,
-                       String academicDegree,
+                       String emailAddress,
                        String sportSection,
                        Float averageMark,
                        String citizenship,
-                       boolean isContractor,
-                       boolean isUnionist,
-                       boolean hasScholarship,
-                       boolean hasSocialBenefit,
-                       String previousEducation,
-                       String registrationCity,
-                       String registrationAddress,
+                       boolean isContract,
+                       boolean socialBenefit,
                        int postIndex,
-                       String characteristics,
                        boolean isFullTimeEducation,
-                       boolean isDutyBound,
-                       String motherName,
+                       boolean isEmployee,
                        String motherPhone,
-                       String fatherName,
                        String fatherPhone,
                        boolean isScientificWorks) {
 
             this.firstName = firstName;
             this.lastName = lastName;
-            this.patronymic = patronymic;
+            this.phoneNumber = phoneNumber;
             this.birthday = birthday;
             this.speciality = speciality;
             this.gender = gender;
             this.faculty = faculty;
             this.groupNumber = groupNumber;
-            this.curator = curator;
+            this.creditsNumber = creditsNumber;
             this.pasportSeries = pasportSeries;
-            this.pasportNumber = pasportNumber;
+            this.liveInChummery = liveInChummery;
             this.identificationNumber = identificationNumber;
             this.course = course;
-            this.academicDegree = academicDegree;
             this.sportSection = sportSection;
             this.averageMark = averageMark;
             this.citizenship = citizenship;
-            this.isContractor = isContractor;
-            this.isUnionist = isUnionist;
-            this.hasScholarship = hasScholarship;
-            this.hasSocialBenefit = hasSocialBenefit;
-            this.previousEducation = previousEducation;
-            this.registrationCity = registrationCity;
-            this.registrationAddress = registrationAddress;
+            this.isContract = isContract;
+            this.emailAddress = emailAddress;
+            this.socialBenefit = socialBenefit;
             this.postIndex = postIndex;
-            this.characteristics = characteristics;
             this.isFullTimeEducation = isFullTimeEducation;
-            this.isDutyBound = isDutyBound;
-            this.motherName = motherName;
+            this.isEmployee = isEmployee;
             this.motherPhone = motherPhone;
-            this.fatherName = fatherName;
             this.fatherPhone = fatherPhone;
             this.isScientificWorks = isScientificWorks;
         }
@@ -173,12 +109,12 @@ Task description:
             this.lastName = lastName;
         }
 
-        public String getPatronymic() {
-            return patronymic;
+        public int getPhoneNumber() {
+            return phoneNumber;
         }
 
-        public void setPatronymic(String patronymic) {
-            this.patronymic = patronymic;
+        public void setPhoneNumber(int phoneNumber) {
+            this.phoneNumber = phoneNumber;
         }
 
         public LocalDate getBirthday() {
@@ -189,11 +125,11 @@ Task description:
             this.birthday = birthday;
         }
 
-        public Speciality getSpeciality() {
+        public String getSpeciality() {
             return speciality;
         }
 
-        public void setSpeciality(Speciality speciality) {
+        public void setSpeciality(String speciality) {
             this.speciality = speciality;
         }
 
@@ -221,12 +157,12 @@ Task description:
             this.groupNumber = groupNumber;
         }
 
-        public String getCurator() {
-            return curator;
+        public int getCreditsNumber() {
+            return creditsNumber;
         }
 
-        public void setCurator(String curator) {
-            this.curator = curator;
+        public void setCreditsNumber(int creditsNumber) {
+            this.creditsNumber = creditsNumber;
         }
 
         public String getPasportSeries() {
@@ -237,12 +173,12 @@ Task description:
             this.pasportSeries = pasportSeries;
         }
 
-        public int getPasportNumber() {
-            return pasportNumber;
+        public boolean getliveInChummery() {
+            return liveInChummery;
         }
 
-        public void setPasportNumber(int pasportNumber) {
-            this.pasportNumber = pasportNumber;
+        public void setliveInChummery(boolean liveInChummery) {
+            this.liveInChummery = liveInChummery;
         }
 
         public int getIdentificationNumber() {
@@ -259,14 +195,6 @@ Task description:
 
         public void setCourse(int course) {
             this.course = course;
-        }
-
-        public String getAcademicDegree() {
-            return academicDegree;
-        }
-
-        public void setAcademicDegree(String academicDegree) {
-            this.academicDegree = academicDegree;
         }
 
         public String getSportSection() {
@@ -293,60 +221,28 @@ Task description:
             this.citizenship = citizenship;
         }
 
-        public boolean isContractor() {
-            return isContractor;
+        public boolean isContract() {
+            return isContract;
         }
 
-        public void setContractor(boolean contractor) {
-            this.isContractor = contractor;
+        public void setContract(boolean contractor) {
+            this.isContract = contractor;
         }
 
-        public boolean isUnionist() {
-            return isUnionist;
+        public String emailAddress() {
+            return emailAddress;
         }
 
-        public void setUnionist(boolean unionist) {
-            this.isUnionist = unionist;
-        }
-
-        public boolean isHasScholarship() {
-            return hasScholarship;
-        }
-
-        public void setHasScholarship(boolean hasScholarship) {
-            this.hasScholarship = hasScholarship;
+        public void setEmailAddress(String emailAddress) {
+            this.emailAddress = emailAddress;
         }
 
         public boolean isHasSocialBenefit() {
-            return hasSocialBenefit;
+            return socialBenefit;
         }
 
-        public void setHasSocialBenefit(boolean hasSocialBenefit) {
-            this.hasSocialBenefit = hasSocialBenefit;
-        }
-
-        public String getPreviousEducation() {
-            return previousEducation;
-        }
-
-        public void setPreviousEducation(String previousEducation) {
-            this.previousEducation = previousEducation;
-        }
-
-        public String getRegistrationCity() {
-            return registrationCity;
-        }
-
-        public void setRegistrationCity(String registrationCity) {
-            this.registrationCity = registrationCity;
-        }
-
-        public String getRegistrationAddress() {
-            return registrationAddress;
-        }
-
-        public void setRegistrationAddress(String registrationAddress) {
-            this.registrationAddress = registrationAddress;
+        public void setHasSocialBenefit(boolean socialBenefit) {
+            this.socialBenefit = socialBenefit;
         }
 
         public int getPostIndex() {
@@ -357,14 +253,6 @@ Task description:
             this.postIndex = postIndex;
         }
 
-        public String getCharacteristics() {
-            return characteristics;
-        }
-
-        public void setCharacteristics(String characteristics) {
-            this.characteristics = characteristics;
-        }
-
         public boolean isFullTimeEducation() {
             return isFullTimeEducation;
         }
@@ -373,20 +261,12 @@ Task description:
             this.isFullTimeEducation = fullTimeEducation;
         }
 
-        public boolean isDutyBound() {
-            return isDutyBound;
+        public boolean isEmployee() {
+            return isEmployee;
         }
 
-        public void setDutyBound(boolean dutyBound) {
-            this.isDutyBound = dutyBound;
-        }
-
-        public String getMotherName() {
-            return motherName;
-        }
-
-        public void setMotherName(String motherName) {
-            this.motherName = motherName;
+        public void setIsEmployee(boolean isEmployee) {
+            this.isEmployee = isEmployee;
         }
 
         public String getMotherPhone() {
@@ -395,14 +275,6 @@ Task description:
 
         public void setMotherPhone(String motherPhone) {
             this.motherPhone = motherPhone;
-        }
-
-        public String getFatherName() {
-            return fatherName;
-        }
-
-        public void setFatherName(String fatherName) {
-            this.fatherName = fatherName;
         }
 
         public String getFatherPhone() {
@@ -421,61 +293,44 @@ Task description:
             this.isScientificWorks = isScientificWorks;
         }
 
-        /**
-         * Class Builder, represents the programming pattern 'Builder' for class Student
-         */
+        //pattern 'Builder' for class Student
         public static class Builder {
             private Student studentToBuild;
 
-            // constructor
             public Builder() {
                 this.studentToBuild = new Student();
             }
 
-            /**
-             * creates a class instance Student similar to another provided Student instance
-             * @param student object, which info will be taken for creation similar student
-             * @return class instance Builder
-             */
             public Builder setSimilarTo(Student student) {
                 this.studentToBuild.firstName = student.firstName;
                 this.studentToBuild.lastName = student.lastName;
-                this.studentToBuild.patronymic = student.patronymic;
+                this.studentToBuild.phoneNumber = student.phoneNumber;
                 this.studentToBuild.birthday = student.birthday;
                 this.studentToBuild.speciality = student.speciality;
                 this.studentToBuild.gender = student.gender;
                 this.studentToBuild.faculty = student.faculty;
                 this.studentToBuild.groupNumber = student.groupNumber;
-                this.studentToBuild.curator = student.curator;
+                this.studentToBuild.creditsNumber = student.creditsNumber;
                 this.studentToBuild.pasportSeries = student.pasportSeries;
-                this.studentToBuild.pasportNumber = student.pasportNumber;
+                this.studentToBuild.liveInChummery = student.liveInChummery;
                 this.studentToBuild.identificationNumber = student.identificationNumber;
                 this.studentToBuild.course = student.course;
-                this.studentToBuild.academicDegree = student.academicDegree;
                 this.studentToBuild.sportSection = student.sportSection;
                 this.studentToBuild.averageMark = student.averageMark;
                 this.studentToBuild.citizenship = student.citizenship;
-                this.studentToBuild.isContractor = student.isContractor;
-                this.studentToBuild.isUnionist = student.isUnionist;
-                this.studentToBuild.hasScholarship = student.hasScholarship;
-                this.studentToBuild.hasSocialBenefit = student.hasSocialBenefit;
-                this.studentToBuild.previousEducation = student.previousEducation;
-                this.studentToBuild.registrationCity = student.registrationCity;
-                this.studentToBuild.registrationAddress = student.registrationAddress;
+                this.studentToBuild.isContract = student.isContract;
+                this.studentToBuild.emailAddress = student.emailAddress;
+                this.studentToBuild.socialBenefit = student.socialBenefit;
                 this.studentToBuild.postIndex = student.postIndex;
-                this.studentToBuild.characteristics = student.characteristics;
                 this.studentToBuild.isFullTimeEducation = student.isFullTimeEducation;
-                this.studentToBuild.isDutyBound = student.isDutyBound;
-                this.studentToBuild.motherName = student.motherName;
+                this.studentToBuild.isEmployee = student.isEmployee;
                 this.studentToBuild.motherPhone = student.motherPhone;
-                this.studentToBuild.fatherName = student.fatherName;
                 this.studentToBuild.fatherPhone = student.fatherPhone;
                 this.studentToBuild.isScientificWorks = student.isScientificWorks;
 
                 return this;
             }
 
-            // setters for programming pattern Builder
             public Builder setFirstName(String firstName) {
                 studentToBuild.setFirstName(firstName);
                 return this;
@@ -486,8 +341,8 @@ Task description:
                 return this;
             }
 
-            public Builder setPatronymic(String patronymic) {
-                studentToBuild.setPatronymic(patronymic);
+            public Builder setPhoneNumber(int phoneNumber) {
+                studentToBuild.setPhoneNumber(phoneNumber);
                 return this;
             }
 
@@ -496,7 +351,7 @@ Task description:
                 return this;
             }
 
-            public Builder setSpeciality(Speciality speciality) {
+            public Builder setSpeciality(String speciality) {
                 studentToBuild.setSpeciality(speciality);
                 return this;
             }
@@ -516,8 +371,8 @@ Task description:
                 return this;
             }
 
-            public Builder setCurator(String curator) {
-                studentToBuild.setCurator(curator);
+            public Builder setCreditsNumber(int creditsNumber) {
+                studentToBuild.setCreditsNumber(creditsNumber);
                 return this;
             }
 
@@ -526,8 +381,8 @@ Task description:
                 return this;
             }
 
-            public Builder setPasportNumber(int pasportNumber) {
-                studentToBuild.setPasportNumber(pasportNumber);
+            public Builder setLiveInChummery(boolean liveInChummery) {
+                studentToBuild.setliveInChummery(liveInChummery);
                 return this;
             }
 
@@ -538,11 +393,6 @@ Task description:
 
             public Builder setCourse(int course) {
                 studentToBuild.setCourse(course);
-                return this;
-            }
-
-            public Builder setAcademicDegree(String academicDegree) {
-                studentToBuild.setAcademicDegree(academicDegree);
                 return this;
             }
 
@@ -562,37 +412,17 @@ Task description:
             }
 
             public Builder setContractor(boolean contractor) {
-                studentToBuild.setContractor(contractor);
+                studentToBuild.setContract(contractor);
                 return this;
             }
 
-            public Builder setUnionist(boolean unionist) {
-                studentToBuild.setUnionist(unionist);
+            public Builder setEmailAddress(String emailAddress) {
+                studentToBuild.setEmailAddress(emailAddress);
                 return this;
             }
 
-            public Builder setHasScholarship(boolean hasScholarship) {
-                studentToBuild.setHasScholarship(hasScholarship);
-                return this;
-            }
-
-            public Builder setHasSocialBenefit(boolean hasSocialBenefit) {
-                studentToBuild.setHasSocialBenefit(hasSocialBenefit);
-                return this;
-            }
-
-            public Builder setPreviousEducation(String previousEducation) {
-                studentToBuild.setPreviousEducation(previousEducation);
-                return this;
-            }
-
-            public Builder setRegistrationCity(String registrationCity) {
-                studentToBuild.setRegistrationCity(registrationCity);
-                return this;
-            }
-
-            public Builder setRegistrationAddress(String registrationAddress) {
-                studentToBuild.setRegistrationAddress(registrationAddress);
+            public Builder setHasSocialBenefit(boolean socialBenefit) {
+                studentToBuild.setHasSocialBenefit(socialBenefit);
                 return this;
             }
 
@@ -601,33 +431,18 @@ Task description:
                 return this;
             }
 
-            public Builder setCharacteristics(String characteristics) {
-                studentToBuild.setCharacteristics(characteristics);
-                return this;
-            }
-
             public Builder setFullTimeEducation(boolean fullTimeEducation) {
                 studentToBuild.setFullTimeEducation(fullTimeEducation);
                 return this;
             }
 
-            public Builder setDutyBound(boolean dutyBound) {
-                studentToBuild.setDutyBound(dutyBound);
-                return this;
-            }
-
-            public Builder setMotherName(String motherName) {
-                studentToBuild.setMotherName(motherName);
+            public Builder setIsEmployee(boolean isEmployee) {
+                studentToBuild.setIsEmployee(isEmployee);
                 return this;
             }
 
             public Builder setMotherPhone(String motherPhone) {
                 studentToBuild.setMotherPhone(motherPhone);
-                return this;
-            }
-
-            public Builder setFatherName(String fatherName) {
-                studentToBuild.setFatherName(fatherName);
                 return this;
             }
 
@@ -641,9 +456,6 @@ Task description:
                 return this;
             }
 
-            /**
-             * @return a built Student class instance
-             */
             public Student build(){
                 return studentToBuild;
             }
