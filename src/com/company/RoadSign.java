@@ -1,10 +1,12 @@
 /*
 *
-* Classame : roadSign
+* Classame : RoadSign
 *
 *  11 June 2020
 *
-* Copyright Danyshchuk Vitalii CHNU 543
+* Author: Danyshchuk Vitalii CHNU 543
+* Version: 1.1
+*
 *  Module 2 task 2
 *
 * Inheritance
@@ -17,17 +19,18 @@
 package com.company;
 
 
+import java.util.Objects;
+//a road sign that has a triangular shape and takes over some variables from the main triangle class
+public class RoadSign extends Triangle{
 
-    public class roadSign extends Triangle{
+        private String signType; // groups of road signs for example: warning, prohibitive, etc.
+        private double signNumber; // serial number of the road sign from the traffic rules
+        private boolean signWarning; // is sign whether the sign is a warning
+        private String signColor;  // for example: red - warning, green - indicative, yellow - prohibitive
 
-        private String signType;
-        private int signNumber;
-        private boolean signWarning;
-        private String signColor;
-
-        public roadSign(int firstSide, int secondSide, int thirdSide,
-                        String signType, int signNumber, boolean signWarning,
-                        String signColor) {
+        public RoadSign(int firstSide,
+                        int secondSide,
+                        int thirdSide) {
             super(firstSide, secondSide, thirdSide);
             this.signType = signType;
             this.signNumber = signNumber;
@@ -35,7 +38,7 @@ package com.company;
             this.signColor = signColor;
         }
 
-        public roadSign(String signType, int signNumber, boolean signWarning,
+        public RoadSign(String signType, int signNumber, boolean signWarning,
                         String signColor)
         {
             this.signType = signType;
@@ -52,7 +55,7 @@ package com.company;
             this.signType = signType;
         }
 
-        public int getSignNumber() {
+        public double getSignNumber() {
             return signNumber;
         }
 
@@ -76,7 +79,7 @@ package com.company;
             this.signColor = signColor;
         }
 
-        public int getAmountSign() {
+        public double getAmountSign() {
             return getSignNumber() + 1;
         }
 
@@ -92,4 +95,19 @@ package com.company;
                     " Amount of sign = " +getAmountSign() + "\n" +
                     '}';
         }
+         @Override
+        public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        RoadSign sign = (RoadSign) o;
+        return getPerimetr() == sign.getPerimetr() &&
+                Double.compare(sign.getPerimetr(), getPerimetr()) == 0;
+    }
+
+        @Override
+        public int hashCode() {
+        return  Objects.hash(getFirstSide(),
+                getSecondSide(), getThirdSide());
+    }
+
     }

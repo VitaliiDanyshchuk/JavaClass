@@ -4,7 +4,9 @@
 *
 *  06 June 2020
 *
-* Copyright Danyshchuk Vitalii CHNU 543
+* Author: Danyshchuk Vitalii CHNU 543
+* Version: 1.2
+*
 *  Module 2 task 1
 *
 * Create a class from the attached document according to the order in your group .  The class must contain
@@ -19,7 +21,7 @@ package com.company;
 
 import java.util.Objects;
 
-public class Triangle implements interTriangle, interBolean {
+public class Triangle implements IGeometry, IPackaging {
 
     private int firstSide;
     private int secondSide;
@@ -163,13 +165,10 @@ public class Triangle implements interTriangle, interBolean {
 
     @Override
     public String toConsole() {
-        String console = "Triangle{"
-                + "-"  + "Area\":" + this.getArea()
-                + "-"
-                + "-"  + "Perimetr\":" + this.getPerimetr()
-                + "}";
+        String console = "Parameters of Triangle" + "\n"
+                + "Area = " + this.getArea() + "\n"
+                + "Perimetr = " + this.getPerimetr() + "\n";
+
         return console;
-
-
     }
 }
